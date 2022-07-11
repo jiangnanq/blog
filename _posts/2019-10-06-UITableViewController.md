@@ -5,11 +5,10 @@ layout: post
 tags: Swift, iOS
 ---
 
-
-
 ## Note of UITableview controller
 
 * Basic usage
+
 ```swift
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +28,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 ```
 
 * Select cell and send data to next viewcontroller
+
 ```swift
 let vc = self.storyboard?.instantiateViewControllerWithIdentifier("studentDetailViewController") as? studentDetailViewController
 vc?.newStudent = false
@@ -37,6 +37,7 @@ self.navigationController?.pushViewController(vc!, animated: true)
 ```
 
 * Select cell and prepare to segue
+
 ```swift
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if segue.identifier == "showdetail" {
@@ -53,6 +54,7 @@ let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier
 ```
 
 * Delete row from tableview controller. Update UIView in other queue. Update tableview by use tableview.deleteRowAtIndexpath
+
 ```swift
 extension savedSongViewController:UITableViewDelegate {
   func tableView(savedSongTable: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -76,9 +78,11 @@ extension savedSongViewController:UITableViewDelegate {
 ```
 
 * Detect button/image was tapped in a cell (use protocol)
-  [Link](http://candycode.io/how-to-properly-do-buttons-in-table-view-cells/)
+
+[Link](http://candycode.io/how-to-properly-do-buttons-in-table-view-cells/)
 
 * Click a cell and popup alertcontroller
+
 ```swift
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       let i = indexPath.row
@@ -101,8 +105,10 @@ extension savedSongViewController:UITableViewDelegate {
 ```
 
 * UITableView cell auto height
-    1. Add constrains in the cell's view
-    2. Add below code in the viewcontroller 
+
+1. Add constrains in the cell's view
+2. Add below code in the viewcontroller 
+
 ```swift
   self.tableView.rowHeight = UITableViewAutomaticDimension
   override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,12 +117,14 @@ extension savedSongViewController:UITableViewDelegate {
 ```
 
 * Reload one cell in the tableview
+
 ```swift
   let ip = NSIndexPath(row: row, section: 0)
   self.tableView.reloadRows(at: [ip as IndexPath], with: .top)
 ```
 
 * Refresh control usage
+
 ```swift
     self.refreshControl = UIRefreshControl()
     self.refreshControl.addTarget(self, action: #selector(test), for: .valueChanged)

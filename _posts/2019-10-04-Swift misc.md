@@ -5,10 +5,10 @@ layout: post
 tags: Swift, iOS
 ---
 
-
 # Swift MISC
 
 1. Detect motion in viewcontroller
+
 ```swift
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
@@ -18,12 +18,14 @@ tags: Swift, iOS
 ```
 
 2. Play system sound
+
 ```swift
     let systemSoudID:SystemSoundID = 1016
     AudioServicesPlaySystemSound(systemSoudID)
 ```
 
 3. Read and write user default setting
+
 ```swift
     let defaults = UserDefaults.standard
     defaults.set(owner, forKey: RecordField.owner.rawValue)
@@ -35,6 +37,7 @@ tags: Swift, iOS
 ```
 
 4. How to use system notification
+
 ```swift
 	// Create notification 
 	let busstopNotification = Notification.Name("busStopNotification")
@@ -56,12 +59,14 @@ tags: Swift, iOS
 ```
 
 5. Random value
+
 ```swift
 let random = Int(arc4random_uniform(UInt32(mrtStations.count)))
 astation  = mrtStations[random]
 ```
 
 6. Singleton class usage
+
 ```swift
 	class currentUserInfo {
 	    static let sharedCurrentUserInstance = currentUserInfo()
@@ -72,6 +77,7 @@ astation  = mrtStations[random]
 ```
 
 7. Rate app 
+
 ```swift
 	func rateApp(appId:String, completion: @escaping ((_ success: Bool) ->())) {
 	    guard let url = URL(string: "itms-apps://itunes.apple.com/app/" + appId) else {
@@ -91,6 +97,7 @@ astation  = mrtStations[random]
 ```
 
 8. Select photo from libary
+
 ```swift
 	func addPhoto() {
 	    imagePicker.allowsEditing = false
@@ -113,6 +120,7 @@ astation  = mrtStations[random]
 ```
 
 9. Background dispatch queues
+
 ```swift
   DispatchQueue.global().async {
           print (message)
@@ -120,6 +128,7 @@ astation  = mrtStations[random]
 ```
 
 10. Notification
+
 ```swift
 	  // Define identifier
 	let notificationName = Notification.Name("NotificationIdentifier")
@@ -137,6 +146,7 @@ astation  = mrtStations[random]
 ```
 
 11. To start a timer task
+
 ```swift
 	var timer = Timer()
 	self.timer = Timer.scheduledTimer(timeInterval: 5.0,
@@ -150,6 +160,7 @@ astation  = mrtStations[random]
 ```
 
 9. Motion
+
 ```swift
 	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
 	    if motion == .motionShake {
@@ -159,6 +170,7 @@ astation  = mrtStations[random]
 ```
 
 10. Send email
+
 ```swift
 	func sendEmail() {
 	    if MFMailComposeViewController.canSendMail() {
