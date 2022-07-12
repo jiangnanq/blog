@@ -8,7 +8,7 @@ tags: Swift, iOS
 
 # Swift Network
 
-1. Create struct comply with Decodable protocol
+* Create struct comply with Decodable protocol
 
 The parameter name should same as json key name
 
@@ -27,7 +27,7 @@ struct Agents: Decodable {
 }
 ```
 
-2. Request data and decode as struct 
+* Request data and decode as struct 
 
 ```swift
 AF.request(serverurl + "/randomagent").responseDecodable (of: Agents.self) { (response) in
@@ -45,7 +45,7 @@ AF.request(serverurl + "/randomareaagent",
 }
 ```
 
-3. Server side (Flask)
+* Server side (Flask)
 
 ```python
 

@@ -7,7 +7,7 @@ tags: Swift, iOS
 
 # Swift MISC
 
-1. Detect motion in viewcontroller
+* Detect motion in viewcontroller
 
 ```swift
 override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
@@ -17,14 +17,14 @@ override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
 }
 ```
 
-2. Play system sound
+* Play system sound
 
 ```swift
 let systemSoudID:SystemSoundID = 1016
 AudioServicesPlaySystemSound(systemSoudID)
 ```
 
-3. Read and write user default setting
+* Read and write user default setting
 
 ```swift
 let defaults = UserDefaults.standard
@@ -36,7 +36,7 @@ if let o = defaults.string(forKey: RecordField.owner.rawValue) {
 }
 ```
 
-4. How to use system notification
+* How to use system notification
 
 ```swift
 // Create notification 
@@ -58,14 +58,14 @@ deinit {
 }
 ```
 
-5. Random value
+* Random value
 
 ```swift
 let random = Int(arc4random_uniform(UInt32(mrtStations.count)))
 astation  = mrtStations[random]
 ```
 
-6. Singleton class usage
+* Singleton class usage
 
 ```swift
 class currentUserInfo {
@@ -76,7 +76,7 @@ class currentUserInfo {
 let a = currentUserInfo.sharedCurrentUserInstance.userRealName
 ```
 
-7. Rate app 
+* Rate app 
 
 ```swift
 func rateApp(appId:String, completion: @escaping ((_ success: Bool) ->())) {
@@ -96,7 +96,7 @@ func rateApp(appId:String, completion: @escaping ((_ success: Bool) ->())) {
 }
 ```
 
-8. Select photo from libary
+* Select photo from libary
 
 ```swift
 func addPhoto() {
@@ -119,7 +119,7 @@ extension addPhotoViewController:UIImagePickerControllerDelegate,UINavigationCon
 }
 ```
 
-9. Background dispatch queues
+* Background dispatch queues
 
 ```swift
 DispatchQueue.global().async {
@@ -127,7 +127,7 @@ DispatchQueue.global().async {
 }
 ```
 
-10. Notification
+* Notification
 
 ```swift
   // Define identifier
@@ -145,7 +145,7 @@ NotificationCenter.default.post(name: notificationName, object: nil)
 NotificationCenter.default.removeObserver(self, name: notificationName, object: nil);
 ```
 
-11. To start a timer task
+* To start a timer task
 
 ```swift
 var timer = Timer()
@@ -159,7 +159,7 @@ func checkSensor() {
 }
 ```
 
-9. Motion
+* Motion
 
 ```swift
 override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -169,7 +169,7 @@ override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
 }
 ```
 
-10. Send email
+* Send email
 
 ```swift
 func sendEmail() {
