@@ -12,20 +12,20 @@ tags: Swift, iOS
 
 The parameter name should same as json key name
 
-	```swift
-	struct Agent: Decodable {
-	    let id: Int
-	    let name: String
-	    let regno: String
-	    let area: String
-	    let description: String
-	    let achievement: [String]
-	}
+```swift
+struct Agent: Decodable {
+    let id: Int
+    let name: String
+    let regno: String
+    let area: String
+    let description: String
+    let achievement: [String]
+}
 
-	struct Agents: Decodable {
-	    let agents: [Agent]
-	}
-	```
+struct Agents: Decodable {
+    let agents: [Agent]
+}
+```
 
 2. Request data and decode as struct 
 
